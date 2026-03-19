@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0d10;
+  --foreground: #f8fafc;
+  --muted: #cbd5e1;
+  --card: #0f1218;
+  --panel: #11151c;
+  --accent: #f472b6;
+  --accent-strong: #fb8cc8;
+  --border: #1f2937;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+* {
+  scrollbar-color: var(--accent) var(--panel);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 80%, transparent);
+  color: #0b0d10;
+}
